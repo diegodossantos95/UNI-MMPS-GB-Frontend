@@ -1,0 +1,10 @@
+<mvc:View
+		controllerName="com.diegodossantos95.MMPSFrontend.controller.App"
+		xmlns:mvc="sap.ui.core.mvc"
+		displayBlock="true"
+		xmlns="sap.m">
+		<App id="idAppControl">
+			<Page id="idPageControl" title="{i18n>appPageTitle}">
+  		</Page>
+		</App>
+</mvc:View>
