@@ -20,6 +20,14 @@
         "entryPath": "/test-resources"
       },
       "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/api",
+      "target": {
+        "type": "destination",
+        "name": "MMPSBackend"
+      },
+      "description": "MMPS Backend Destination"
     }
   ]
 }

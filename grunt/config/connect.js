@@ -52,13 +52,18 @@ module.exports = function (grunt, config) {
                 context: '/resources',
                 host: 'sapui5.hana.ondemand.com',
                 https: true
-			}, {
+			},{
                 context: '/test-resources',
                 host: 'sapui5.hana.ondemand.com',
                 https: true,
                 headers: {
                     'accept-encoding': 'utf8'
                 }
+			},{
+                context: '/api',
+                host: 'localhost',
+                port: 8080,
+                https: false
 			}]
         },
         proxy: {
@@ -74,7 +79,7 @@ module.exports = function (grunt, config) {
                     port: 8080,
                     https: false
                 }
-			}, {
+			},{
                 context: '/test-resources',
                 host: 'sapui5.hana.ondemand.com',
                 https: true,
@@ -86,6 +91,11 @@ module.exports = function (grunt, config) {
                     port: 8080,
                     https: false
                 }
+			},{
+                context: '/api',
+                host: 'localhost',
+                port: 8080,
+                https: false
 			}]
         }
     });
