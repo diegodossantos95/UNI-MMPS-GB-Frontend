@@ -21,7 +21,8 @@
 		},
 		"supportedThemes": [
 			"sap_hcb",
-			"sap_belize"
+			"sap_belize",
+            "sap_belize_plus"
 		]
 	},
 	"sap.ui5": {
@@ -53,8 +54,18 @@
 				"async": true
 			},
 			"routes": [
+                {
+                  "pattern": "",
+                  "name": "Dashboard",
+                  "target": "Dashboard"
+                }
             ],
 			"targets": {
+                "Dashboard": {
+                  "viewName": "Dashboard",
+                  "viewId": "Dashboard",
+                  "viewLevel": 1
+                }
 			}
 		}
 	}

@@ -1,0 +1,12 @@
+<mvc:View controllerName="com.diegodossantos95.MMPSFrontend.controller.Dashboard"
+		  xmlns:mvc="sap.ui.core.mvc"
+		  xmlns="sap.m"
+          displayBlock="true">
+    <TileContainer tiles="{Dashboard>/tiles}">
+        <StandardTile
+				icon="{Dashboard>icon}"
+				type="Create"
+				title="{Dashboard>title}"
+                press="onTilePress"/>
+    </TileContainer>
+</mvc:View>
