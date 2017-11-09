@@ -3,6 +3,5 @@ sap.ui.define([
 ], function (Controller) {
   "use strict";
   return Controller.extend("com.diegodossantos95.MMPSFrontend.controller.App", {
-    onInit: function () {}
   });
 });
