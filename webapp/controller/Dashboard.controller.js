@@ -1,27 +1,17 @@
 sap.ui.define([
   "sap/ui/core/mvc/Controller",
-  "sap/ui/model/json/JSONModel"
-], function (Controller, JSONModel) {
+  "com/diegodossantos95/MMPSFrontend/model/models"
+], function (Controller, models) {
   "use strict";
   return Controller.extend("com.diegodossantos95.MMPSFrontend.controller.Dashboard", {
     onInit: function(){
-      var oModel = new JSONModel({
-        tiles: [
-          {
-            icon:"",
-            title:"Categoria"
-          },
-          {
-            icon:"",
-            title:"Area de processo"
-          }
-        ]
-      });
-      this.getView().setModel(oModel, "Dashboard");
+      this.getView().setModel(models.getDashboardModel(), "Dashboard");
     },
     
     onTilePress: function(oEvent){
-      console.log(oEvent); 
+      var oTile = oEvent.getSource();
+      var sView = oTile.data("view");
+      console.log(sView); 
     }
   });
 });

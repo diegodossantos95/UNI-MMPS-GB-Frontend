@@ -14,6 +14,12 @@ sap.ui.define([
       });
       oDeviceModel.setDefaultBindingMode("OneWay");
       return oDeviceModel;
+    },
+      
+    getDashboardModel: function(){
+      var oModel = new JSONModel();
+      oModel.loadData("./model/data/DashboardTiles.json", {}, false);
+      return oModel;
     }
   };
 });

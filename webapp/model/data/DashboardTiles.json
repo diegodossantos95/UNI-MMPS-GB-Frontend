@@ -1,0 +1,41 @@
+{
+    "tiles": [
+        {
+            "icon": "",
+            "title": "Categoria",
+            "view": "categoria"
+        },{
+            "icon": "",
+            "title": "Area de processo",
+            "view": "areaProcesso"
+        },{
+            "icon": "",
+            "title": "Nivel de maturidade",
+            "view": "nivelMaturidade"
+        },{
+            "icon": "",
+            "title": "Modelo",
+            "view": "modelo"
+        },{
+            "icon": "",
+            "title": "Meta generica",
+            "view": "metaGenerica"
+        },{
+            "icon": "",
+            "title": "Meta especifica",
+            "view": "metaEspecifica"
+        },{
+            "icon": "",
+            "title": "Pratica especifica",
+            "view": "praticaEspecifica"
+        },{
+            "icon": "",
+            "title": "Produto de Trabalho",
+            "view": "produtoTrabalho"
+        },{
+            "icon": "",
+            "title": "Nivel de capacidade",
+            "view": "nivelCapacidade"
+        }
+    ]
+}
