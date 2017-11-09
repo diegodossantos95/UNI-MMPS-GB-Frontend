@@ -7,7 +7,7 @@ module.exports = function (grunt) {
             files: [{
                     expand: true,
                     cwd: 'webapp',
-                    src: ['**/*.css', 'index.html', 'neo-app.json'],
+                    src: ['**/*.css', 'index.html', '**/*.json'],
                     dest: 'dist/'
                 }]
         }

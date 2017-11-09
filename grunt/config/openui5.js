@@ -8,7 +8,6 @@ module.exports = function (grunt, mConfig) {
                     cwd: 'webapp',
                     prefix: mConfig.namespace.split(".").join("/"),
                     src: [
-                            '**/*.json',
                             '**/*.js',
                             '**/*.fragment.html',
                             '**/*.fragment.json',

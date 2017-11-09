@@ -12,7 +12,7 @@ module.exports = function (grunt) {
       files: [{
         expand: true,
         cwd: 'dist',
-        src: ['**/*-preload.*', '**/*.css', 'index.html', 'neo-app.json']
+        src: ['**/*-preload.*', '**/*.css', 'index.html', '**/*.json']
       }]
     }
   });
