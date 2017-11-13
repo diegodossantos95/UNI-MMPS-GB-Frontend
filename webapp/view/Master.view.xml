@@ -4,9 +4,10 @@
 		displayBlock="true"
 		xmlns="sap.m">
     <Page id="masterPage" title="Master">
-        <List items="{
-				path: 'Master>/list',
-				factory: '.entityListFactory'
-			}" />
+        <List items="{Master>/list}">
+            <items>
+                <StandardListItem title="{Name}" type="Navigation"/>
+            </items>
+        </List>
     </Page>
 </mvc:View>
