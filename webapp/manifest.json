@@ -58,13 +58,35 @@
                   "pattern": "",
                   "name": "Dashboard",
                   "target": "Dashboard"
-                }
-            ],
+                },{
+                    "pattern": "{entity}",
+                    "name": "SplitApp",
+                    "target": ["SplitApp","Detail", "Master"]
+                },{
+                    "pattern": "{entity}/{id}",
+                    "name": "Detail",
+                    "target": ["Master", "Detail"]
+                }],
 			"targets": {
                 "Dashboard": {
-                  "viewName": "Dashboard",
-                  "viewId": "Dashboard",
-                  "viewLevel": 1
+                  "viewName": "Dashboard"
+                },
+                "SplitApp": {
+                   "viewName": "SplitApp" 
+                },
+                "Master": {
+                  "parent" : "SplitApp",
+                  "viewName": "Master",
+                  "viewLevel": 2, 
+                  "controlId": "idSplitAppControl",
+                  "controlAggregation": "masterPages"
+                },
+                "Detail": {
+                  "parent" : "SplitApp",
+                  "viewName": "Detail",
+                  "viewLevel": 3,
+                  "controlId": "idSplitAppControl",
+                  "controlAggregation": "detailPages"
                 }
 			}
 		}

@@ -1,5 +1,5 @@
 sap.ui.define([
-  "sap/ui/core/mvc/Controller",
+  "com/diegodossantos95/MMPSFrontend/controller/BaseController",
   "com/diegodossantos95/MMPSFrontend/model/models"
 ], function (Controller, models) {
   "use strict";
@@ -11,7 +11,9 @@ sap.ui.define([
     onTilePress: function(oEvent){
       var oTile = oEvent.getSource();
       var sView = oTile.data("view");
-      console.log(sView); 
+      this.getRouter().navTo("SplitApp", {
+        entity: sView
+      });
     }
   });
 });

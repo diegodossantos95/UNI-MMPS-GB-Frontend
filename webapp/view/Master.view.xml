@@ -1,0 +1,12 @@
+<mvc:View
+		controllerName="com.diegodossantos95.MMPSFrontend.controller.Master"
+		xmlns:mvc="sap.ui.core.mvc"
+		displayBlock="true"
+		xmlns="sap.m">
+    <Page id="masterPage" title="Master">
+        <List items="{
+				path: 'Master>/list',
+				factory: '.entityListFactory'
+			}" />
+    </Page>
+</mvc:View>
