@@ -4,5 +4,8 @@
 		displayBlock="true"
 		xmlns="sap.m">
     <Page id="detailPage" title="Details">
+        <footer>
+			<Toolbar/>
+		</footer>
     </Page>
 </mvc:View>

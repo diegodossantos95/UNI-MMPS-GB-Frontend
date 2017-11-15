@@ -4,10 +4,18 @@
 		displayBlock="true"
 		xmlns="sap.m">
     <Page id="masterPage" title="Master">
-        <List items="{Master>/list}">
-            <items>
-                <StandardListItem title="{Name}" type="Navigation"/>
-            </items>
-        </List>
+        <content>
+            <List items="{Master>/}">
+                <items>
+                    <StandardListItem title="{Master>name}" type="Navigation"/>
+                </items>
+            </List>
+        </content>
+        <footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://add"/>
+			</Toolbar>
+		</footer>
     </Page>
 </mvc:View>

@@ -1,25 +1,34 @@
 sap.ui.define([
   "sap/ui/model/json/JSONModel",
-  "sap/ui/Device"
-], function (JSONModel, Device) {
+  "com/diegodossantos95/MMPSFrontend/utils/RequestHandler"
+], function (JSONModel, RequestHandler) {
   "use strict";
 
   return {
-    getDeviceModel: function () {
-      var oDeviceModel = new JSONModel({
-        isTouch : Device.support.touch,
-        isNoTouch : !Device.support.touch,
-        isPhone : Device.system.phone,
-        isNoPhone : !Device.system.phone
-      });
-      oDeviceModel.setDefaultBindingMode("OneWay");
-      return oDeviceModel;
-    },
+    _entityListModel: new JSONModel(),
       
     getDashboardModel: function(){
       var oModel = new JSONModel();
       oModel.loadData("./model/data/DashboardTiles.json", {}, false);
       return oModel;
+    },
+      
+    getEntityListModel: function(sEntityName){
+      this._getEntityList(sEntityName);
+      return this._entityListModel;
+    },
+      
+    //PRIVATE FUNCTIONS
+    _getEntityList: function(sEntityName){
+      RequestHandler.getEntityList(sEntityName, this._getEntityListSuccess.bind(this), this._requestError.bind(this));
+    },
+      
+    _getEntityListSuccess: function(oResponse){
+       this._entityListModel.setData(oResponse); 
+    },
+      
+    _requestError: function(){
+      alert("error");
     }
   };
 });

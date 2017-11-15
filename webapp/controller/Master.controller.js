@@ -1,6 +1,7 @@
 sap.ui.define([
-  "com/diegodossantos95/MMPSFrontend/controller/BaseController"
-], function (Controller) {
+  "com/diegodossantos95/MMPSFrontend/controller/BaseController",
+  "com/diegodossantos95/MMPSFrontend/model/models"
+], function (Controller, models) {
   "use strict";
   return Controller.extend("com.diegodossantos95.MMPSFrontend.controller.Master", {
       
@@ -9,14 +10,14 @@ sap.ui.define([
     },
       
     // private function
-      
     _initRoute: function () {
       this.getRouter().getRoute('SplitApp').attachPatternMatched(this._routeMatch, this);
     },
       
     _routeMatch: function (oEvent) {
       var sEntity = oEvent.getParameter("arguments").entity;
-      console.log(sEntity);
+      var oModel = models.getEntityListModel(sEntity);
+      this.getView().setModel(oModel, "Master");
     }
   });
 });

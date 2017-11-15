@@ -3,39 +3,39 @@
         {
             "icon": "",
             "title": "Categoria",
-            "view": "CATEGORIA"
+            "view": "category"
         },{
             "icon": "",
             "title": "Area de processo",
-            "view": "AREA_PROCESSO"
+            "view": "process_area"
         },{
             "icon": "",
             "title": "Nivel de maturidade",
-            "view": "NIVEL_MATURIDADE"
+            "view": "maturity_level"
         },{
             "icon": "",
             "title": "Modelo",
-            "view": "MODELO"
+            "view": "model"
         },{
             "icon": "",
             "title": "Meta generica",
-            "view": "META_GENERICA"
+            "view": "generic_goal"
         },{
             "icon": "",
             "title": "Meta especifica",
-            "view": "META_ESPECIFICA"
+            "view": "specific_goal"
         },{
             "icon": "",
             "title": "Pratica especifica",
-            "view": "PRATICA_ESPECIFICA"
+            "view": "specific_practice"
         },{
             "icon": "",
             "title": "Produto de Trabalho",
-            "view": "PRODUTO_TRABALHO"
+            "view": "work_product"
         },{
             "icon": "",
             "title": "Nivel de capacidade",
-            "view": "NIVEL_CAPACIDADE"
+            "view": "capacity_level"
         }
     ]
 }
