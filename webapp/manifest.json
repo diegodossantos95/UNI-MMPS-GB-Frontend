@@ -61,7 +61,7 @@
                 },{
                     "pattern": "{entity}",
                     "name": "SplitApp",
-                    "target": ["SplitApp","Detail", "Master"]
+                    "target": ["SplitApp","Master", "Empty"]
                 },{
                     "pattern": "{entity}/{id}",
                     "name": "Detail",
@@ -84,6 +84,13 @@
                 "Detail": {
                   "parent" : "SplitApp",
                   "viewName": "Detail",
+                  "viewLevel": 3,
+                  "controlId": "idSplitAppControl",
+                  "controlAggregation": "detailPages"
+                },
+                "Empty": {
+                  "parent" : "SplitApp",
+                  "viewName": "Empty",
                   "viewLevel": 3,
                   "controlId": "idSplitAppControl",
                   "controlAggregation": "detailPages"
