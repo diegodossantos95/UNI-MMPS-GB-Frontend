@@ -1,0 +1,30 @@
+<mvc:View
+		controllerName="com.diegodossantos95.MMPSFrontend.controller.Create"
+		xmlns:mvc="sap.ui.core.mvc"
+	    xmlns:form="sap.ui.layout.form"
+		displayBlock="true"
+		xmlns="sap.m">
+    <Page id="createPage" title="Create">
+        <content>
+            <form:SimpleForm editable="true">
+                <form:content>
+                    <Label text="Sigla"/>
+                    <Input value="{Create>/sigla}" visible="{path: 'Create>/sigla', formatter:'.formatter.isAvailable'}"/>
+                    
+                    <Label text="Name"/>
+                    <Input value="{Create>/name}"/>
+                    
+                    <Label text="Description"/>
+                    <Input value="{Create>/description}" visible="{path: 'Create>/description', formatter:'.formatter.isAvailable'}"/>
+                </form:content>
+            </form:SimpleForm>
+        </content>
+        <footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button text="Cancel" press="onCancelPress"/>
+                <Button text="Save" press="onSavePress"/>
+			</Toolbar>
+		</footer>
+    </Page>
+</mvc:View>

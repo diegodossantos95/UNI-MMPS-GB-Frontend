@@ -38,6 +38,17 @@ sap.ui.define([
       RequestHandler.deleteEntity(sEntityName, sEntityId, fnSuccess, this._requestError.bind(this));
     },
       
+    // Create Entity Model
+    getCreateEntityModel: function(sEntityName) {
+      var oModel = new JSONModel();
+      oModel.loadData("./model/data/" + sEntityName + ".json", {}, false);
+      return oModel; 
+    },
+      
+    saveCreateEntityModel: function(sEntityName, oData, fnSuccess){
+      RequestHandler.saveCreateEntity(sEntityName, oData, fnSuccess, this._requestError.bind(this));
+    },
+      
     //PRIVATE FUNCTIONS
     // List
     _getEntityList: function(sEntityName){

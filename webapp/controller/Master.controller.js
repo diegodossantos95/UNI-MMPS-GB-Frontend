@@ -11,6 +11,12 @@ sap.ui.define([
     },
       
     //ACTIONS
+    onCreatePress: function() {
+      this.getRouter().getTargets().display("Create", {
+        entity: this._sEntity
+      });
+    },
+      
     onItemPress: function(oEvent) {
       var oSource = oEvent.getSource();
       var sBinding = oSource.getBindingContextPath("Master");

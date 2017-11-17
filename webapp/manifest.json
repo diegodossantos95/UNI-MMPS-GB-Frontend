@@ -95,6 +95,13 @@
                   "viewLevel": 3,
                   "controlId": "idSplitAppControl",
                   "controlAggregation": "detailPages"
+                },
+                "Create": {
+                  "parent" : "SplitApp",
+                  "viewName": "Create",
+                  "viewLevel": 3,
+                  "controlId": "idSplitAppControl",
+                  "controlAggregation": "detailPages"
                 }
 			}
 		}

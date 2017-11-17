@@ -14,7 +14,7 @@
         <footer>
 			<Toolbar>
 				<ToolbarSpacer/>
-				<Button icon="sap-icon://add"/>
+				<Button icon="sap-icon://add" press="onCreatePress"/>
 			</Toolbar>
 		</footer>
     </Page>

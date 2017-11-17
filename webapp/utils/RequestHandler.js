@@ -30,6 +30,13 @@ sap.ui.define([
         urlConstant:'BY_ID',
         keys: [sEntityName, sEntityId]
       }, fnSuccess, fnError);
+    },
+      
+    saveCreateEntity: function(sEntityName, oData, fnSuccess, fnError){
+      BackendConnector.doPost({
+        urlConstant:'ENTITY',
+        keys: [sEntityName]
+      }, oData, fnSuccess, fnError);
     }
   };
 });
