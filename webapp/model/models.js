@@ -31,10 +31,6 @@ sap.ui.define([
       RequestHandler.saveEntityDetail(sEntityName, sEntityId, oData, this._getEntityDetailSuccess.bind(this), this._requestError.bind(this));
     },
       
-    resetEntityDetailModel: function(sEntityName, sEntityId){
-      this._getEntityDetail(sEntityName, sEntityId);
-    },
-      
     deleteEntityDetailModel: function(sEntityName, sEntityId, fnSuccess){
       RequestHandler.deleteEntity(sEntityName, sEntityId, fnSuccess, this._requestError.bind(this));
     },
@@ -58,6 +54,7 @@ sap.ui.define([
     //PRIVATE FUNCTIONS
     // List
     _getEntityList: function(sEntityName){
+      this._entityListModel.setData({});
       RequestHandler.getEntityList(sEntityName, this._getEntityListSuccess.bind(this), this._requestError.bind(this));
     },
       
@@ -67,6 +64,7 @@ sap.ui.define([
       
     // Detail
     _getEntityDetail: function(sEntityName, sEntityId){
+      this._entityDetailModel.setData({});
       RequestHandler.getEntityDetail(sEntityName, sEntityId, this._getEntityDetailSuccess.bind(this), this._requestError.bind(this));
     },
       

@@ -19,7 +19,9 @@ sap.ui.define([
     },
       
     onCancelPress: function(){
-      models.resetEntityDetailModel(this._sEntity, this._sId);
+       this.getRouter().navTo("SplitApp", {
+        entity: this._sEntity
+      }); 
     },
       
     onDeletePress: function(){

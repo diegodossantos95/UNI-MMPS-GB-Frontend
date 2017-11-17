@@ -32,6 +32,9 @@ sap.ui.define([
     _loadModel: function(){
       var oModel = models.getCreateEntityModel(this._sEntity);
       this.getView().setModel(oModel, "Create");
+        
+      var oModel2 = models.getRelationshipModel();
+      this.getView().setModel(oModel2, "Relationship");
     },
       
     _createEntitySuccess: function(oResponse){

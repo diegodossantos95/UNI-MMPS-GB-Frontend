@@ -2,6 +2,7 @@
 		controllerName="com.diegodossantos95.MMPSFrontend.controller.Create"
 		xmlns:mvc="sap.ui.core.mvc"
 	    xmlns:form="sap.ui.layout.form"
+        xmlns:core="sap.ui.core"
 		displayBlock="true"
 		xmlns="sap.m">
     <Page id="createPage" title="Create">
@@ -16,6 +17,11 @@
                     
                     <Label text="Description"/>
                     <Input value="{Create>/description}" visible="{path: 'Create>/description', formatter:'.formatter.isAvailable'}"/>
+                    
+                    <Label text="Category"/>
+                    <Select selectedKey="{Create>/category/id}" items="{Relationship>/category}" visible="{path: 'Create>/category', formatter:'.formatter.isAvailable'}">
+                      <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </Select>
                 </form:content>
             </form:SimpleForm>
         </content>
