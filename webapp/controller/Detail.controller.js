@@ -39,7 +39,10 @@ sap.ui.define([
       
     _requestModels: function(){
       var oModel = models.getEntityDetailModel(this._sEntity, this._sId);
-      this.getView().setModel(oModel, "Detail"); 
+      this.getView().setModel(oModel, "Detail");
+        
+      var oModel2 = models.getRelationshipModel();
+      this.getView().setModel(oModel2, "Relationship");
     },
       
     _deleteSuccess: function(){

@@ -4,7 +4,7 @@ sap.ui.define([
 
   return {
     isAvailable: function(oValue){
-      return !!oValue;
+      return oValue !== undefined;
     }
   };
 });

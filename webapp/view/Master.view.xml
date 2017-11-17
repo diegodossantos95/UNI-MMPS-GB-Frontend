@@ -3,15 +3,7 @@
 		xmlns:mvc="sap.ui.core.mvc"
 		displayBlock="true"
 		xmlns="sap.m">
-    <Page id="masterPage">
-        <customHeader>
-			<Toolbar>
-				<Button icon="sap-icon://home" press="onHomePress" />
-				<ToolbarSpacer/>
-				<Title text="Master" level="H2"/>
-                <ToolbarSpacer/>
-			</Toolbar>
-		</customHeader>
+    <Page id="masterPage" title="Master" showNavButton="true" navButtonPress="onBackPress">
         <content>
             <List items="{Master>/}">
                 <items>

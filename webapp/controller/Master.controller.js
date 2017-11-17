@@ -17,7 +17,7 @@ sap.ui.define([
       });
     },
       
-    onHomePress: function(){
+    onBackPress: function(){
       this.getRouter().navTo("Dashboard", {}, true /*no history*/);
     },
       

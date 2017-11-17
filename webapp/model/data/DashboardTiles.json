@@ -7,11 +7,11 @@
         },{
             "icon": "",
             "title": "Area de processo",
-            "view": "process_area"
+            "view": "process-area"
         },{
             "icon": "",
             "title": "Nivel de maturidade",
-            "view": "maturity_level"
+            "view": "maturity-level"
         },{
             "icon": "",
             "title": "Modelo",
@@ -19,23 +19,23 @@
         },{
             "icon": "",
             "title": "Meta generica",
-            "view": "generic_goal"
+            "view": "generic-goal"
         },{
             "icon": "",
             "title": "Meta especifica",
-            "view": "specific_goal"
+            "view": "specific-goal"
         },{
             "icon": "",
             "title": "Pratica especifica",
-            "view": "specific_practice"
+            "view": "specific-practice"
         },{
             "icon": "",
             "title": "Produto de Trabalho",
-            "view": "work_product"
+            "view": "work-product"
         },{
             "icon": "",
             "title": "Nivel de capacidade",
-            "view": "capacity_level"
+            "view": "capacity-level"
         }
     ]
 }

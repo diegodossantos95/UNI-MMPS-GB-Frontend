@@ -7,6 +7,7 @@ sap.ui.define([
   return {
     _entityListModel: new JSONModel(),
     _entityDetailModel: new JSONModel(),
+    _entityRelationshipModel: new JSONModel(),
       
     getDashboardModel: function(){
       var oModel = new JSONModel();
@@ -49,6 +50,11 @@ sap.ui.define([
       RequestHandler.saveCreateEntity(sEntityName, oData, fnSuccess, this._requestError.bind(this));
     },
       
+    // Relationships
+    getRelationshipModel: function(){
+      return this._entityRelationshipModel; 
+    },
+      
     //PRIVATE FUNCTIONS
     // List
     _getEntityList: function(sEntityName){
@@ -66,6 +72,25 @@ sap.ui.define([
       
     _getEntityDetailSuccess: function(oResponse){
       this._entityDetailModel.setData(oResponse); 
+      this._loadRelationships(oResponse);
+    },
+      
+    _loadRelationships: function(oResponse){
+      this._entityRelationshipModel.setData({});
+      var property;
+      for (property in oResponse) {
+        if(!!oResponse[property].id){
+          this._loadCollection(property);
+        }
+      }
+    },
+      
+    _loadCollection: function(sCollectionName){
+      RequestHandler.getEntityList(sCollectionName, this._loadCollectionSuccess.bind(this, sCollectionName), this._requestError.bind(this));
+    },
+      
+    _loadCollectionSuccess: function(sCollectionName, oResponse){
+      this._entityRelationshipModel.setProperty("/" + sCollectionName, oResponse);
     },
       
     _requestError: function(){

@@ -9,7 +9,7 @@
             <form:SimpleForm editable="true">
                 <form:content>
                     <Label text="Sigla"/>
-                    <Input value="{Create>/sigla}" visible="{path: 'Create>/sigla', formatter:'.formatter.isAvailable'}"/>
+                    <Input value="{Create>/initials}" visible="{path: 'Create>/initials', formatter:'.formatter.isAvailable'}"/>
                     
                     <Label text="Name"/>
                     <Input value="{Create>/name}"/>
