@@ -21,6 +21,10 @@ sap.ui.define([
     onCancelPress: function(){
       models.resetEntityDetailModel(this._sEntity, this._sId);
     },
+      
+    onDeletePress: function(){
+      models.deleteEntityDetailModel(this._sEntity, this._sId, this._deleteSuccess.bind(this));
+    },
     
     // private function
     _initRoute: function () {
@@ -36,9 +40,12 @@ sap.ui.define([
     _requestModels: function(){
       var oModel = models.getEntityDetailModel(this._sEntity, this._sId);
       this.getView().setModel(oModel, "Detail"); 
-        
-      var oViewModel = models.getDetailViewModel(this._sEntity);
-      this.getView().setModel(oViewModel, "DetailView"); 
+    },
+      
+    _deleteSuccess: function(){
+      this.getRouter().navTo("SplitApp", {
+        entity: this._sEntity
+      });    
     }
   });
 });

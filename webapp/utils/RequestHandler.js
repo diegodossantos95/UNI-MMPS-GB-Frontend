@@ -23,6 +23,13 @@ sap.ui.define([
         urlConstant:'BY_ID',
         keys: [sEntityName, sEntityId]
       }, oData, fnSuccess, fnError);
+    },
+      
+    deleteEntity: function(sEntityName, sEntityId, fnSuccess, fnError){
+      BackendConnector.doDelete({
+        urlConstant:'BY_ID',
+        keys: [sEntityName, sEntityId]
+      }, fnSuccess, fnError);
     }
   };
 });

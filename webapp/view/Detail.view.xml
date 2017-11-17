@@ -21,6 +21,7 @@
         </content>
         <footer>
 			<Toolbar>
+                <Button text="Delete" press="onDeletePress"/>
 				<ToolbarSpacer/>
 				<Button text="Cancel" press="onCancelPress"/>
                 <Button text="Save" press="onSavePress"/>

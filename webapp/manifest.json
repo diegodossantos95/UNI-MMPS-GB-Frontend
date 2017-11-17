@@ -63,8 +63,9 @@
                     "name": "SplitApp",
                     "target": ["SplitApp","Master", "Empty"]
                 },{
-                    "pattern": "{entity}/{id}",
+                    "pattern": "{id}",
                     "name": "Detail",
+                    "parent": "SplitApp",
                     "target": ["Master", "Detail"]
                 }],
 			"targets": {

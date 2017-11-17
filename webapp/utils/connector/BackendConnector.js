@@ -10,8 +10,8 @@ sap.ui.define([
       return this._doAjaxCall('GET', sUrlConstant, null, fnSuccess, fnError, null);
     },
      
-    doDelete: function (sUrlConstant, oData, fnSuccess, fnError) {
-      return this._doAjaxCall('DELETE', sUrlConstant, oData, fnSuccess, fnError);
+    doDelete: function (sUrlConstant, fnSuccess, fnError) {
+      return this._doAjaxCall('DELETE', sUrlConstant, null, fnSuccess, fnError);
     },
       
     doPost: function (sUrlConstant, oData, fnSuccess, fnError) {

@@ -19,7 +19,6 @@ sap.ui.define([
       return this._entityListModel;
     },
       
-      
     //Entity Detail Model
     getEntityDetailModel: function(sEntityName, sEntityId) {
       this._getEntityDetail(sEntityName, sEntityId);
@@ -35,10 +34,8 @@ sap.ui.define([
       this._getEntityDetail(sEntityName, sEntityId);
     },
       
-    getDetailViewModel: function(sEntityName){
-      var oModel = new JSONModel();
-      oModel.loadData("./model/data/" + sEntityName + ".json", {}, false);
-      return oModel; 
+    deleteEntityDetailModel: function(sEntityName, sEntityId, fnSuccess){
+      RequestHandler.deleteEntity(sEntityName, sEntityId, fnSuccess, this._requestError.bind(this));
     },
       
     //PRIVATE FUNCTIONS
