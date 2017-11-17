@@ -17,6 +17,10 @@ sap.ui.define([
       });
     },
       
+    onHomePress: function(){
+      this.getRouter().navTo("Dashboard", {}, true /*no history*/);
+    },
+      
     onItemPress: function(oEvent) {
       var oSource = oEvent.getSource();
       var sBinding = oSource.getBindingContextPath("Master");
