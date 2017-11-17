@@ -6,8 +6,23 @@ sap.ui.define([
   return {
     getEntityList: function(sEntityName, fnSuccess, fnError){
       BackendConnector.doGet({
-        urlConstant: sEntityName
+        urlConstant:'ENTITY',
+        keys: [sEntityName]
       }, fnSuccess, fnError);
+    },
+      
+    getEntityDetail: function(sEntityName, sEntityId, fnSuccess, fnError){
+      BackendConnector.doGet({
+        urlConstant:'BY_ID',
+        keys: [sEntityName, sEntityId]
+      }, fnSuccess, fnError);
+    },
+      
+    saveEntityDetail: function(sEntityName, sEntityId, oData, fnSuccess, fnError){
+      BackendConnector.doPut({
+        urlConstant:'BY_ID',
+        keys: [sEntityName, sEntityId]
+      }, oData, fnSuccess, fnError);
     }
   };
 });

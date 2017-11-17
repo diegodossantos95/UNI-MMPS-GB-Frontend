@@ -43,8 +43,7 @@ sap.ui.define([
             
       if (typeof sUrlConstant === "object") {
         var mParams = sUrlConstant;
-        var sQueryString = mParams.queryString ? mParams.queryString : ""; //Evaluate the truthy value of the parameter.
-        mConfig.url = UrlProvider.getUrl(mParams.urlConstant, mParams.keys) + sQueryString;
+        mConfig.url = UrlProvider.getUrl(mParams.urlConstant, mParams.keys);
       } else {
         mConfig.url = UrlProvider.getUrl(sUrlConstant);
       }

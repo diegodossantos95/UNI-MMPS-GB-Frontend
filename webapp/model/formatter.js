@@ -3,5 +3,8 @@ sap.ui.define([
   "use strict";
 
   return {
+      isAvailable: function(oValue){
+          return !!oValue;
+      }
   };
 });

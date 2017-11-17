@@ -7,7 +7,7 @@
         <content>
             <List items="{Master>/}">
                 <items>
-                    <StandardListItem title="{Master>name}" type="Navigation"/>
+                    <StandardListItem title="{Master>name}" type="Navigation" press="onItemPress"/>
                 </items>
             </List>
         </content>

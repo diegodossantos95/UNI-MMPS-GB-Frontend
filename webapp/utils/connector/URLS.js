@@ -3,7 +3,8 @@ sap.ui.define([
   "use strict";
 
   var mURLS = {
-    category: '/api/category'
+    ENTITY: '/api/$',
+    BY_ID: '/api/$/$'
   };
 
   return Object.freeze(mURLS);
