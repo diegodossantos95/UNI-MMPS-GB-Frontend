@@ -61,7 +61,7 @@
                 },{
                     "pattern": "{entity}",
                     "name": "SplitApp",
-                    "target": ["SplitApp","Master", "Empty"]
+                    "target": ["SplitApp", "Master", "Empty"]
                 },{
                     "pattern": "{id}",
                     "name": "Detail",
@@ -70,10 +70,11 @@
                 }],
 			"targets": {
                 "Dashboard": {
-                  "viewName": "Dashboard"
+                  "viewName": "Dashboard",
+                  "viewLevel": 1
                 },
                 "SplitApp": {
-                   "viewName": "SplitApp" 
+                   "viewName": "SplitApp"
                 },
                 "Master": {
                   "parent" : "SplitApp",
@@ -92,7 +93,7 @@
                 "Empty": {
                   "parent" : "SplitApp",
                   "viewName": "Empty",
-                  "viewLevel": 3,
+                  "viewLevel": 2,
                   "controlId": "idSplitAppControl",
                   "controlAggregation": "detailPages"
                 },
