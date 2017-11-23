@@ -1,10 +1,10 @@
 {
     "tiles": [
         {
-            "icon": "sap-icon://tree",
-            "title": "Models Visualization",
-            "type": "Monitor",
-            "view": "model-view"
+            "icon": "",
+            "title": "Modelo",
+            "type": "Create",
+            "view": "model"
         },{
             "icon": "",
             "title": "Categoria",
@@ -20,11 +20,6 @@
             "title": "Nivel de maturidade",
             "type": "Create",
             "view": "maturity-level"
-        },{
-            "icon": "",
-            "title": "Modelo",
-            "type": "Create",
-            "view": "model"
         },{
             "icon": "",
             "title": "Meta generica",

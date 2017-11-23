@@ -22,6 +22,31 @@
                     <Select selectedKey="{Detail>/category/id}" items="{Relationship>/category}" visible="{path: 'Detail>/category', formatter:'.formatter.isAvailable'}">
                       <core:Item key="{Relationship>id}" text="{Relationship>name}" />
                     </Select>
+                    
+                    <Label text="Specific Practice"/>
+                    <Select selectedKey="{Detail>/specific-practice/id}" items="{Relationship>/specific-practice}" visible="{path: 'Detail>/specific-practice', formatter:'.formatter.isAvailable'}">
+                      <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </Select>
+                    
+                    <Label text="Specific Goal"/>
+                    <Select selectedKey="{Detail>/specific-goal/id}" items="{Relationship>/specific-goal}" visible="{path: 'Detail>/specific-goal', formatter:'.formatter.isAvailable'}">
+                      <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </Select>
+                    
+                    <Label text="Generic Goal"/>
+                    <Select selectedKey="{Detail>/generic-goal/id}" items="{Relationship>/generic-goal}" visible="{path: 'Detail>/generic-goal', formatter:'.formatter.isAvailable'}">
+                      <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </Select>
+                    
+                    <Label text="Capacity Level"/>
+                    <Select selectedKey="{Detail>/capacity-level/id}" items="{Relationship>/capacity-level}" visible="{path: 'Detail>/capacity-level', formatter:'.formatter.isAvailable'}">
+                      <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </Select>
+                    
+                    <Label text="Process Area"/>
+                    <Select selectedKey="{Detail>/process-area/id}" items="{Relationship>/process-area}" visible="{path: 'Detail>/process-area', formatter:'.formatter.isAvailable'}">
+                      <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </Select>
                 </form:content>
             </form:SimpleForm>
         </content>

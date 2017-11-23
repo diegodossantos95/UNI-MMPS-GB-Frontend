@@ -19,7 +19,7 @@ sap.ui.define([
     },
       
     onCancelPress: function(){
-       this.getRouter().navTo("SplitApp", {
+      this.getRouter().navTo("SplitApp", {
         entity: this._sEntity
       }); 
     },
