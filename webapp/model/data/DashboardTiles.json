@@ -1,40 +1,54 @@
 {
     "tiles": [
         {
+            "icon": "sap-icon://tree",
+            "title": "Models Visualization",
+            "type": "Monitor",
+            "view": "model-view"
+        },{
             "icon": "",
             "title": "Categoria",
+            "type": "Create",
             "view": "category"
         },{
             "icon": "",
             "title": "Area de processo",
+            "type": "Create",
             "view": "process-area"
         },{
             "icon": "",
             "title": "Nivel de maturidade",
+            "type": "Create",
             "view": "maturity-level"
         },{
             "icon": "",
             "title": "Modelo",
+            "type": "Create",
             "view": "model"
         },{
             "icon": "",
             "title": "Meta generica",
+            "type": "Create",
             "view": "generic-goal"
         },{
             "icon": "",
             "title": "Meta especifica",
+            "type": "Create",
             "view": "specific-goal"
         },{
             "icon": "",
             "title": "Pratica especifica",
+            "type": "Create",
             "view": "specific-practice"
         },{
             "icon": "",
             "title": "Produto de Trabalho",
+            "type": "Create",
             "view": "work-product"
         },{
             "icon": "",
             "title": "Nivel de capacidade",
+            "type": "Create",
             "view": "capacity-level"
         }
     ]

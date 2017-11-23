@@ -7,7 +7,7 @@
         <TileContainer tiles="{Dashboard>/tiles}">
             <StandardTile
                     icon="{Dashboard>icon}"
-                    type="Create"
+                    type="{Dashboard>type}"
                     title="{Dashboard>title}"
                     press="onTilePress"
                     customData:view="{Dashboard>view}"/>
