@@ -61,7 +61,7 @@
                 },{
                     "pattern": "{entity}",
                     "name": "SplitApp",
-                    "target": ["SplitApp", "Master", "Empty"]
+                    "target": ["SplitApp", "Empty", "Master"]
                 },{
                     "pattern": "{id}",
                     "name": "Detail",
