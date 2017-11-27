@@ -14,37 +14,37 @@
             "icon": "",
             "title": "Area de processo",
             "type": "Create",
-            "view": "process-area"
+            "view": "processArea"
         },{
             "icon": "",
             "title": "Nivel de maturidade",
             "type": "Create",
-            "view": "maturity-level"
+            "view": "maturityLevel"
         },{
             "icon": "",
             "title": "Meta generica",
             "type": "Create",
-            "view": "generic-goal"
+            "view": "genericGoal"
         },{
             "icon": "",
             "title": "Meta especifica",
             "type": "Create",
-            "view": "specific-goal"
+            "view": "specificGoal"
         },{
             "icon": "",
             "title": "Pratica especifica",
             "type": "Create",
-            "view": "specific-practice"
+            "view": "specificPractice"
         },{
             "icon": "",
             "title": "Produto de Trabalho",
             "type": "Create",
-            "view": "work-product"
+            "view": "workProduct"
         },{
             "icon": "",
             "title": "Nivel de capacidade",
             "type": "Create",
-            "view": "capacity-level"
+            "view": "capabilityLevel"
         }
     ]
 }

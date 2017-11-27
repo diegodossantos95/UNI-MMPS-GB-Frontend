@@ -2,7 +2,10 @@
 	"name": "",
 	"description": "",
 	"initials": "",
-	"specific-goal": {
+	"capabilityLevel": {
+		"id":""
+	},
+    "processArea": {
 		"id":""
 	}
 }

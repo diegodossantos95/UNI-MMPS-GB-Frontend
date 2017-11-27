@@ -15,11 +15,49 @@
                     <Label text="Name"/>
                     <Input value="{Create>/name}"/>
                     
+                    <Label text="URL"/>
+                    <Input value="{Create>/link}" visible="{path: 'Create>/link', formatter:'.formatter.isAvailable'}"/>
+                    
                     <Label text="Description"/>
                     <Input value="{Create>/description}" visible="{path: 'Create>/description', formatter:'.formatter.isAvailable'}"/>
                     
                     <Label text="Category"/>
                     <Select selectedKey="{Create>/category/id}" items="{Relationship>/category}" visible="{path: 'Create>/category', formatter:'.formatter.isAvailable'}">
+                      <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </Select>
+                    
+                    <Label text="Specific Practice"/>
+                    <Select selectedKey="{Create>/specificPractice/id}" items="{Relationship>/specificPractice}" visible="{path: 'Create>/specificPractice', formatter:'.formatter.isAvailable'}">
+                      <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </Select>
+                    
+                    <Label text="Specific Goal"/>
+                    <Select selectedKey="{Create>/specificGoal/id}" items="{Relationship>/specificGoal}" visible="{path: 'Create>/specificGoal', formatter:'.formatter.isAvailable'}">
+                      <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </Select>
+                    
+                    <Label text="Generic Goal"/>
+                    <Select selectedKey="{Create>/genericGoal/id}" items="{Relationship>/genericGoal}" visible="{path: 'Create>/genericGoal', formatter:'.formatter.isAvailable'}">
+                      <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </Select>
+                    
+                    <Label text="Capability Level"/>
+                    <Select selectedKey="{Create>/capabilityLevel/id}" items="{Relationship>/capabilityLevel}" visible="{path: 'Create>/capabilityLevel', formatter:'.formatter.isAvailable'}">
+                      <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </Select>
+                    
+                    <Label text="Maturity Level"/>
+                    <Select selectedKey="{Create>/maturityLevel/id}" items="{Relationship>/maturityLevel}" visible="{path: 'Create>/maturityLevel', formatter:'.formatter.isAvailable'}">
+                      <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </Select>
+                    
+                    <Label text="Model"/>
+                    <Select selectedKey="{Create>/model/id}" items="{Relationship>/model}" visible="{path: 'Create>/model', formatter:'.formatter.isAvailable'}">
+                      <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </Select>
+                    
+                    <Label text="Process Area"/>
+                    <Select selectedKey="{Create>/processArea/id}" items="{Relationship>/processArea}" visible="{path: 'Create>/processArea', formatter:'.formatter.isAvailable'}">
                       <core:Item key="{Relationship>id}" text="{Relationship>name}" />
                     </Select>
                 </form:content>

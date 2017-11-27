@@ -39,6 +39,7 @@ sap.ui.define([
     getCreateEntityModel: function(sEntityName) {
       var oModel = new JSONModel();
       oModel.loadData("./model/data/" + sEntityName + ".json", {}, false);
+      this._loadRelationships(oModel.getData());
       return oModel; 
     },
       
@@ -77,7 +78,7 @@ sap.ui.define([
       this._entityRelationshipModel.setData({});
       var property;
       for (property in oResponse) {
-        if(!!oResponse[property].id){
+        if(oResponse[property].id != undefined){
           this._loadCollection(property);
         }
       }

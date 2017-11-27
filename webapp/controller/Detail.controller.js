@@ -27,7 +27,7 @@ sap.ui.define([
     onDeletePress: function(){
       models.deleteEntityDetailModel(this._sEntity, this._sId, this._deleteSuccess.bind(this));
     },
-    
+      
     // private function
     _initRoute: function () {
       this.getRouter().getRoute('Detail').attachPatternMatched(this._routeMatch, this);
@@ -37,6 +37,15 @@ sap.ui.define([
       this._sEntity = oEvent.getParameter("arguments").entity;
       this._sId = oEvent.getParameter("arguments").id;
       this._requestModels();
+      this._setView();
+    },
+      
+    _setView: function(){
+      if(this._sEntity == "model"){
+        this.byId("idModelTree").setVisible(true); 
+      }else{
+        this.byId("idModelTree").setVisible(false); 
+      }  
     },
       
     _requestModels: function(){
