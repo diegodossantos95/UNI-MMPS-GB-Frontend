@@ -61,6 +61,11 @@
                       <core:Item key="{Relationship>id}" text="{Relationship>name}" />
                     </Select>
                     
+                    <Label text="Specific Practices"/>
+                    <MultiComboBox id="idComboBoxSpecificPractice" items="{Relationship>/specificPractice}" selectionFinish="onSpecificPraticesSelectionFinish" visible="{path: 'Detail>/specificPractices', formatter:'.formatter.isAvailable'}">
+                        <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </MultiComboBox>
+                    
                     <Label text="Model Tree"/>
                     <Tree id="idModelTree" items="{Detail>/}">
                         <StandardTreeItem title="{text}"/> 

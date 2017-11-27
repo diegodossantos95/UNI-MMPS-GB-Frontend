@@ -60,6 +60,11 @@
                     <Select selectedKey="{Create>/processArea/id}" items="{Relationship>/processArea}" visible="{path: 'Create>/processArea', formatter:'.formatter.isAvailable'}">
                       <core:Item key="{Relationship>id}" text="{Relationship>name}" />
                     </Select>
+                    
+                    <Label text="Specific Practices"/>
+                    <MultiComboBox items="{Relationship>/specificPractice}" selectionFinish="onSpecificPraticesSelectionFinish" visible="{path: 'Create>/specificPractices', formatter:'.formatter.isAvailable'}">
+                        <core:Item key="{Relationship>id}" text="{Relationship>name}" />
+                    </MultiComboBox>
                 </form:content>
             </form:SimpleForm>
         </content>

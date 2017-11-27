@@ -20,7 +20,7 @@ sap.ui.define([
       
     //Actions
     onSavePress: function(){
-      var oModel = this.getView().getModel("Create");
+      var oModel = this.getModel("Create");
       models.saveCreateEntityModel(this._sEntity, oModel.getData(), this._createEntitySuccess.bind(this));
     },
       
@@ -28,13 +28,27 @@ sap.ui.define([
       this.getRouter().getTargets().display("Empty");
     },
       
+    onSpecificPraticesSelectionFinish: function(oEvent){
+      var aItems = oEvent.getParameter("selectedItems");
+      var aElements = [];
+        
+      for(var i = 0; i < aItems.length; i++){
+        aElements.push({
+          id: aItems[i].getKey()
+        });
+      }
+        
+      var oModel = this.getModel("Create");
+      oModel.setProperty("/specificPractices", aElements);
+    },
+      
     // Private functions
     _loadModel: function(){
       var oModel = models.getCreateEntityModel(this._sEntity);
-      this.getView().setModel(oModel, "Create");
+      this.setModel(oModel, "Create");
         
       var oModel2 = models.getRelationshipModel();
-      this.getView().setModel(oModel2, "Relationship");
+      this.setModel(oModel2, "Relationship");
     },
       
     _createEntitySuccess: function(oResponse){

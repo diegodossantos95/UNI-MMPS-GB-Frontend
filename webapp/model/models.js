@@ -21,14 +21,14 @@ sap.ui.define([
     },
       
     //Entity Detail Model
-    getEntityDetailModel: function(sEntityName, sEntityId) {
-      this._getEntityDetail(sEntityName, sEntityId);
+    getEntityDetailModel: function(sEntityName, sEntityId, fnSuccess) {
+      this._getEntityDetail(sEntityName, sEntityId, fnSuccess);
       return this._entityDetailModel; 
     },
       
-    saveEntityDetailModel: function(sEntityName, sEntityId){
+    saveEntityDetailModel: function(sEntityName, sEntityId, fnSuccess){
       var oData = this._entityDetailModel.getData();
-      RequestHandler.saveEntityDetail(sEntityName, sEntityId, oData, this._getEntityDetailSuccess.bind(this), this._requestError.bind(this));
+      RequestHandler.saveEntityDetail(sEntityName, sEntityId, oData, this._getEntityDetailSuccess.bind(this, fnSuccess), this._requestError.bind(this));
     },
       
     deleteEntityDetailModel: function(sEntityName, sEntityId, fnSuccess){
@@ -55,7 +55,6 @@ sap.ui.define([
     //PRIVATE FUNCTIONS
     // List
     _getEntityList: function(sEntityName){
-      this._entityListModel.setData({});
       RequestHandler.getEntityList(sEntityName, this._getEntityListSuccess.bind(this), this._requestError.bind(this));
     },
       
@@ -64,14 +63,17 @@ sap.ui.define([
     },
       
     // Detail
-    _getEntityDetail: function(sEntityName, sEntityId){
+    _getEntityDetail: function(sEntityName, sEntityId, fnSuccess){
       this._entityDetailModel.setData({});
-      RequestHandler.getEntityDetail(sEntityName, sEntityId, this._getEntityDetailSuccess.bind(this), this._requestError.bind(this));
+      RequestHandler.getEntityDetail(sEntityName, sEntityId, this._getEntityDetailSuccess.bind(this, fnSuccess), this._requestError.bind(this));
     },
       
-    _getEntityDetailSuccess: function(oResponse){
+    _getEntityDetailSuccess: function(fnSuccess, oResponse){
       this._entityDetailModel.setData(oResponse); 
       this._loadRelationships(oResponse);
+      if(fnSuccess){
+        fnSuccess();
+      }
     },
       
     _loadRelationships: function(oResponse){
@@ -80,6 +82,8 @@ sap.ui.define([
       for (property in oResponse) {
         if(oResponse[property].id != undefined){
           this._loadCollection(property);
+        }else if(property == "specificPractices"){
+          this._loadCollection("specificPractice");      
         }
       }
     },
