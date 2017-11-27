@@ -12,14 +12,19 @@
             "view": "category"
         },{
             "icon": "",
-            "title": "Area de processo",
-            "type": "Create",
-            "view": "processArea"
-        },{
-            "icon": "",
             "title": "Nivel de maturidade",
             "type": "Create",
             "view": "maturityLevel"
+        },{
+            "icon": "",
+            "title": "Nivel de capacidade",
+            "type": "Create",
+            "view": "capabilityLevel"
+        },{
+            "icon": "",
+            "title": "Area de processo",
+            "type": "Create",
+            "view": "processArea"
         },{
             "icon": "",
             "title": "Meta generica",
@@ -40,11 +45,6 @@
             "title": "Produto de Trabalho",
             "type": "Create",
             "view": "workProduct"
-        },{
-            "icon": "",
-            "title": "Nivel de capacidade",
-            "type": "Create",
-            "view": "capabilityLevel"
         }
     ]
 }
