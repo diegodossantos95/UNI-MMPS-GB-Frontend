@@ -68,7 +68,7 @@
                     
                     <Label text="Model Tree"/>
                     <Tree id="idModelTree" items="{Detail>/}">
-                        <StandardTreeItem title="{text}"/> 
+                        <StandardTreeItem title="{Detail>name}"/> 
                     </Tree>
                 </form:content>
             </form:SimpleForm>
