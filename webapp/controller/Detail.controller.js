@@ -51,14 +51,16 @@ sap.ui.define([
       this._sEntity = oEvent.getParameter("arguments").entity;
       this._sId = oEvent.getParameter("arguments").id;
       this._requestModels();
-      this._setView();
+      this._setupTreeView();
     },
       
-    _setView: function(){
+    _setupTreeView: function(){
       if(this._sEntity == "model"){
-        this.byId("idModelTree").setVisible(true); 
+        this.byId("idGenericGoalsTree").setVisible(true); 
+        this.byId("idProcessAreasTree").setVisible(true);
       }else{
-        this.byId("idModelTree").setVisible(false); 
+        this.byId("idGenericGoalsTree").setVisible(false);
+        this.byId("idProcessAreasTree").setVisible(false); 
       }  
     },
       

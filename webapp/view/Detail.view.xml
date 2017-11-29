@@ -66,9 +66,15 @@
                         <core:Item key="{Relationship>id}" text="{Relationship>name}" />
                     </MultiComboBox>
                     
-                    <Label text="Model Tree"/>
-                    <Tree id="idModelTree" items="{Detail>/}">
+                    
+                    <Label text="Generic Goals"/>
+                    <Tree id="idGenericGoalsTree" items="{Detail>/genericGoals}">
                         <StandardTreeItem title="{Detail>name}"/> 
+                    </Tree>
+                    
+                    <Label text="Process Areas"/>
+                    <Tree id="idProcessAreasTree" items="{Detail>/processAreas}">
+                        <StandardTreeItem title="{parts:['Detail>initials', 'Detail>name'], formatter:'.formatter.formatTreeName'}"/> 
                     </Tree>
                 </form:content>
             </form:SimpleForm>
