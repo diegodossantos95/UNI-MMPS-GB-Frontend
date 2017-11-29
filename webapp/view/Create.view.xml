@@ -7,7 +7,7 @@
 		xmlns="sap.m">
     <Page id="createPage" title="Create">
         <content>
-            <form:SimpleForm editable="true">
+            <form:SimpleForm editable="true" maxContainerCols="2" width="100%" layout="ResponsiveGridLayout" labelSpanL="2" labelSpanM="2" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2">
                 <form:content>
                     <Label text="Sigla"/>
                     <Input value="{Create>/initials}" visible="{path: 'Create>/initials', formatter:'.formatter.isAvailable'}"/>
