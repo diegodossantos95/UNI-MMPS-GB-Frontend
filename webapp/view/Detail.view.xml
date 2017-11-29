@@ -62,7 +62,7 @@
                     </Select>
                     
                     <Label text="Specific Practices"/>
-                    <MultiComboBox id="idComboBoxSpecificPractice" items="{Relationship>/specificPractice}" selectionFinish="onSpecificPraticesSelectionFinish" visible="{path: 'Detail>/specificPractices', formatter:'.formatter.isAvailable'}">
+                    <MultiComboBox id="idComboBoxSpecificPractice" items="{Relationship>/specificPractice}" selectionFinish="onSpecificPraticesSelectionFinish">
                         <core:Item key="{Relationship>id}" text="{Relationship>name}" />
                     </MultiComboBox>
                     

@@ -52,16 +52,18 @@ sap.ui.define([
       this._sId = oEvent.getParameter("arguments").id;
       this._requestModels();
       this._setupTreeView();
+      this._setupComboBox();
+    },
+      
+    _setupComboBox: function(){
+      var bWorkProduct = this._sEntity == "workProduct";
+      this.byId("idComboBoxSpecificPractice").setVisible(bWorkProduct); 
     },
       
     _setupTreeView: function(){
-      if(this._sEntity == "model"){
-        this.byId("idGenericGoalsTree").setVisible(true); 
-        this.byId("idProcessAreasTree").setVisible(true);
-      }else{
-        this.byId("idGenericGoalsTree").setVisible(false);
-        this.byId("idProcessAreasTree").setVisible(false); 
-      }  
+      var bModel = this._sEntity == "model";
+      this.byId("idGenericGoalsTree").setVisible(bModel);
+      this.byId("idProcessAreasTree").setVisible(bModel); 
     },
       
     _requestModels: function(){
