@@ -1,6 +1,7 @@
 sap.ui.define([
-  'sap/ui/core/UIComponent'
-], function(UIComponent) {
+  'sap/ui/core/UIComponent',
+  'com/diegodossantos95/MMPSFrontend/model/models'
+], function(UIComponent, models) {
   'use strict';
   return UIComponent.extend('com.diegodossantos95.MMPSFrontend.Component', {
     metadata: {
@@ -17,6 +18,9 @@ sap.ui.define([
         
       //Initialize the router
       this.getRouter().initialize();
+        
+      // Set the device model
+      this.setModel(models.getDeviceModel(), "Device");
     }
   });
 });
